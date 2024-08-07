@@ -1,0 +1,51 @@
+body, html {  
+    height: 100%;  
+    margin: 0;  
+    font-family: Arial, sans-serif;  
+}  
+  
+/* 其他样式保持不变... */  
+  
+.container {  
+    display: flex;  
+    justify-content: space-around;  
+    align-items: center;  
+    height: 100%;  
+    background-image: url('bg.png'); /* 替换为你的背景图片路径 */  
+    background-size: cover;  
+    background-position: center;  
+    position: relative; /* 确保下面的伪元素能正确定位 */  
+    overflow: hidden; /* 防止模糊效果溢出容器 */  
+    text-align: center;  
+    color: white;  
+}  
+  
+.container::before {  
+    content: "";  
+    position: absolute;  
+    top: 0;  
+    left: 0;  
+    right: 0;  
+    bottom: 0;  
+    background: inherit; /* 继承父元素的背景 */  
+    backdrop-filter: blur(10px); /* 模糊效果 */  
+    filter: brightness(0.8); /* 可以调整亮度来增强磨砂效果 */  
+    z-index: -1; /* 确保在内容下方 */  
+}  
+  
+.button {  
+    text-decoration: none;  
+    color: white;  
+    background-color: rgba(0, 123, 255, 0.7); /* 稍微调整透明度以融入背景 */  
+    padding: 15px 32px;  
+    border-radius: 5px;  
+    font-size: 16px;  
+    margin: 20px;  
+    position: relative; /* 确保按钮在磨砂层之上 */  
+    z-index: 1; /* 显式设置z-index以确保按钮在磨砂层之上 */  
+    transition: background-color 0.3s;  
+}  
+  
+.button:hover {  
+    background-color: rgba(0, 86, 179, 0.9); /* 鼠标悬停时调整颜色和透明度 */  
+}
