@@ -1,20 +1,17 @@
-<!DOCTYPE html>  
-<html lang="en">  
+<!DOCTYPE html>   
 <head>  
     <meta charset="UTF-8">  
     <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-    <title>作品上传页面</title>  
+    <title>我的作品集</title>  
+    <link rel="stylesheet" href="style/styles.css">  
 </head>  
 <body>  
-    <h1>上传你的作品</h1>  
-    <form action="/upload" method="post" enctype="multipart/form-data">  
-        <label for="title">作品标题:</label>  
-        <input type="text" id="title" name="title" required><br><br>  
-        <label for="description">作品描述:</label>  
-        <textarea id="description" name="description" rows="4" cols="50" required></textarea><br><br>  
-        <label for="file">选择文件:</label>  
-        <input type="file" id="file" name="file" required><br><br>  
-        <input type="submit" value="上传作品">  
-    </form>  
+    <div class="title">
+        <h1>PCC原创作品集</h1>
+    </div>
+    <div class="container">  
+        <a href="https://pration.mcpcc.fun/" target="_blank" class="button">Pration插件</a>  
+        <a href="https://github.com/PlayChessClub/pccpack" target="_blank" class="button">PCC数据包</a>  
+    </div>  
 </body>  
 </html>
